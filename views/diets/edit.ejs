@@ -1,0 +1,140 @@
+<% include ../partials/header %>
+<!-- /// -->
+<% var a ="2_egg_Omlet_+_2_Brown_Bread_+_2_Banana"; %>
+<% var b ="2_Boiled Eggs + 2 edli + peanut butter"; %>
+<% var c ="60_gm Oats + 10 Almonds + Apple"; %>
+<% var d ="3_Boiled Eggs + 1 Glass Milk + 2 Banana"; %>
+
+<!-- //// -->
+<% var e ="1_Cup Rice + Any Daal + 2 Boiled Eggs "; %>
+<% var f ="1_Cup Rice + Chicken 200 gm + Salad"; %>
+<% var g ="2_Chapati + 2 Egg Bhurji + Salad"; %>
+<% var h ="Roasted Chicken 200 gm + Salad"; %>
+
+<!-- //// -->
+<% var i ="idli"; %>
+<% var j ="pulav"; %>
+<% var k ="2eggs"; %>
+<% var l ="2_chapati"; %>
+
+
+<!-- //// -->
+<% var m ="2_chapati"; %>
+<% var n ="2_chapati"; %>
+<% var o ="2_chapati"; %>
+<% var p ="2eggs"; %>
+
+
+<!-- //// -->
+<% var q ="2_chapati"; %>
+<% var r ="2_chapati"; %>
+<% var s ="2_chapati"; %>
+<% var t ="2_chapati"; %>
+
+
+<!-- //// -->
+<% var u ="2eggs"; %>
+<% var v ="2_chapati"; %>
+<% var w ="2_chapati"; %>
+<% var x="2_chapati"; %>
+<!-- //// -->
+
+
+<div class="container form">
+    
+<h2 style="text-align:center;">Edit Info About Your Diet Plan</h2>
+      <div style="width :30%; margin: 20px auto;">
+           <form action="/diets/<%= data._id %>?_method=PUT" method="POST">
+               <div class="form-group">
+                    <input class="form-control" type="text"value="<%= data.name %>" placeholder="name" name="newcamp[name]">
+                 </div>
+                 <div class="form-group" >
+                        <input class="form-control"  type="text" value="<%= data.image%>" placeholder="Add any Motivational image" name="newcamp[image]">
+                  </div>
+                  <div class="form-group" >
+                        <input class="form-control"  type="text" value="<%= data.weight%>" placeholder="Weight in kg" name="newcamp[weight]">
+                  </div>
+                  <div class="form-group" >
+                        <input class="form-control"  type="text" value="<%= data.bodyfat%>" placeholder="Body-fat in %" name="newcamp[bodyfat]">
+                  </div>
+              <div class="form-group">
+                    <select class="ui dropdown" name="newcamp[breakfast]" value="<%= data.breakfast %>" >
+                            <option value="please select">Breackfast</option>
+                            <option value=<%=a%>><%=a%></option>
+                            <option value=<%=b%>><%=b%></option>
+                            <option value=<%=c%>><%=c%></option>
+                            <option value=<%=d%>><%=d%></option>
+                          
+                           
+                    </select>
+                   </div>
+      <!-- drop 2 -->
+                   <div class="form-group" >
+                      <select name="newcamp[lunch]"value="<%= data.lunch %> "class="ui dropdown">
+                            <option value=""><span >Lunch</span></option>
+                            <option value=<%=e%>><%=e%></option>
+                            <option value=<%=f%>><%=f%></option>
+                           <option value=<%=g%>><%=g%></option>
+                           <option value=<%=h%>><%=h%></option>
+                          
+                      </select>
+                     </div>
+    <!-- drop3 -->
+                     <div class="form-group">
+                        <select name="newcamp[snack]" value="<%= data.snack %>" class="ui dropdown">
+                                <option value="">Snack</option>
+                                <option value=<%=i%>><%=i%></option>
+                              <option value=<%=j%>><%=j%></option>
+                                <option value=<%=k%>><%=k%></option>
+                                <option value=<%=l%>><%=l%></option>
+                           
+                            
+                        </select>
+                       </div>
+    <!-- drop4 -->
+                       <div class="form-group">
+                          <select name="newcamp[prework]" value="<%= data.prework %>" class="ui dropdown">
+                                <option value="">Preworkout</option>
+                                <option value=<%=m%>><%=m%></option>
+                                <option value=<%=n%>><%=n%></option>
+                                <option value=<%=o%>><%=o%></option>
+                                <option value=<%=p%>><%=p%></option>
+                              
+                          </select>
+                         </div>
+     <!-- drop5 -->
+                  <div class="form-group">
+                    <select name="newcamp[postwork]" value="<%= data.postwork %>" class="ui dropdown">
+                            <option value="">Postworkout</option>
+                            <option value=<%=q%>><%=q%></option>
+                            <option value=<%=r%>><%=r%></option>
+                            <option value=<%=s%>><%=s%></option>
+                            <option value=<%=t%>><%=t%></option>
+                        
+                    </select>
+                   </div>
+     <!-- drop6 -->
+                   <div class="form-group">
+                      <select name="newcamp[dinner]" value="<%= data.dinner %>"  class="ui dropdown">
+                            <option value="">Dinner</option>
+                            <option value=<%=u%>><%=u%></option>
+                            <option value=<%=v%>><%=v%></option>
+                            <option value=<%=w%>><%=w%></option>
+                            <option value=<%=x%>><%=x%></option>
+                      
+                      </select>
+                     </div>
+                    
+              
+              <div class="form-group">
+                    <button  class="ui black button btn-block">submit</button>
+               </div>
+        
+             </form>
+             <a class="ui grey button  " href="/diets">Back</a>
+        </div>
+    </div>
+ 
+    
+
+<% include ../partials/footer %>

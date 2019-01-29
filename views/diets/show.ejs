@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<h2 style="text-align:center;">The diet plan <%= gym1.name%> follows..</h2>
+<div class="ui raised very padded text container segment form">
+        <div style="display:inline;">
+         
+         <p style="font-size:10px;">(<%=gym1.date.toString()%>)</p>
+        </div>
+        <div>
+                <img class="ui medium  rounded image" src="<%= gym1.image%>" >
+        </div>
+         <div >
+           
+            <h3></h3>
+            <h1><%=gym1.breakfast %> </h1>
+            <h1><%=gym1.lunch %> </h1>
+            <h1><%=gym1.snack %> </h1>
+            <h1><%=gym1.prework %> </h1>
+            <h1><%=gym1.postwork %> </h1>
+            <h1><%=gym1.dinner %> </h1>
+            <h1><%=gym1.xx %> </h1>
+            
+         
+           
+        
+        <div class="ui purple segment">
+            <a href="/diets"><button class="ui black button">back</button></a>
+    <a href="/diets/<%= gym1._id %>/edit"><button class="ui black button">edit</button></a>
+    <form id="delete"action="/diets/<%= gym1.id %>?_method=DELETE" method="post">
+         <a href="/diets/<%= gym1._id %>"><button class="ui black button">delete</button></a>
+    </form>
+   
+        </div>
+  </div>
+</div>
+    
+
+ 
+<% include ../partials/footer %>
