@@ -1,24 +1,29 @@
 <% include ../partials/header %>
 
 <h2 style="text-align:center;">The diet plan <%= gym1.name%> follows..</h2>
+
 <div class="ui raised very padded text container segment form">
-        <div style="display:inline;">
+                
+          <div class="ui segment">    
+              <a class="ui green ribbon label">Tips</a>
+        
          
-         <p style="font-size:10px;">(<%=gym1.date.toString()%>)</p>
-        </div>
+         <p style="font-size:10px;"><%= gym1.date%></p>
+       
         <div>
                 <img class="ui medium  rounded image" src="<%= gym1.image%>" >
         </div>
          <div >
            
-            <h3></h3>
+            <h3><%= gym1.weight%></h3>
+            <h3><%= gym1.bodyfat%></h3>
             <h1><%=gym1.breakfast %> </h1>
             <h1><%=gym1.lunch %> </h1>
             <h1><%=gym1.snack %> </h1>
             <h1><%=gym1.prework %> </h1>
             <h1><%=gym1.postwork %> </h1>
             <h1><%=gym1.dinner %> </h1>
-            <h1><%=gym1.xx %> </h1>
+          
             
          
            
@@ -32,6 +37,41 @@
    
         </div>
   </div>
+</div>  
+  <div class="ui segment">
+                <a class="ui green ribbon label">Tips</a>  
+  <div class="rules">
+                <h2 class="ui header">
+               
+                 <a class="ui black circular label">Load your plate with vegetables.</a>
+               </h2>
+             </div>
+         
+             <div class="rules">
+                     <h2 class="ui header">
+                      
+                      <a class="ui black circular label">Have a plan when you hit the grocery store.</a>
+                    </h2>
+            </div>
+            <div class="rules">
+                 <h2 class="ui header">
+                  
+                  <a class="ui black circular label">Cut down on processed foods.</a>
+                </h2>
+        </div>
+         <div class="rules">
+                     <h2 class="ui header">
+              
+                      <a class="ui black circular label">Switch to whole grains.</a>
+                    </h2>
+            </div>  
+            <div class="rules">
+                 <h2 class="ui header">
+              
+                  <a class="ui black circular label">Enjoy your food,Don’t just count calories.</a>
+                </h2>
+        </div> 
+</div> 
 </div>
     
 

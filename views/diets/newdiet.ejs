@@ -38,30 +38,51 @@
 <% var w ="2_chapati"; %>
 <% var x="2_chapati"; %>
 <!-- //// -->
+<% function validateForm(){ %>
+     var x = document.forms.["gym"].["newcamp.name"].value; 
+   <% if (x==""){ %>
+        alert("name must be filled out");
+        return false;
+    <%}%>
+<%}%>
+
 
 <div class="container form">
     
 <h2 style="text-align:center;">Add Your New Diet Plan</h2>
       <div style="width :40%; margin: 20px auto;">
-           <form action="/diets" method="POST">
+           <form name="gym" action="/diets"  method="POST">
                <div class="form-group">
              <h3>
-                    <input class="form-control" type="text" placeholder="name" name="newcamp[name]">
+                    <input class="form-control" type="text" placeholder="name" name="name">
              </h3>
                  </div>
               <div class="form-group" >
-                    <input class="form-control"  type="text" placeholder="Add any Motivational image" name="newcamp[image]">
+                  <div class="row">
+                      <div class="col-md-8">
+                            <input class="form-control" type="text" placeholder="Add any Motivational image" name="image">
+                      </div>
+                      <div class="col-md-4">
+                            <button class="ui white button"><a href="https://unsplash.com/search/photos/motivation"> here</a></button>
+                      </div>
+                  </div>
+                   
+                    
               </div>
               <div class="form-group" >
-                    <input class="form-control"  type="text" placeholder="Weight in kg" name="newcamp[weight]">
+                  <label> <h5>Pick a date...</h5></label>
+                    <input class="form-control"  type="date" name="date" >
               </div>
               <div class="form-group" >
-                    <input class="form-control"  type="text" placeholder="Body-fat in %" name="newcamp[bodyfat]">
+                    <input class="form-control"  type="text" placeholder="weight" name="weight">
               </div>
+              <div class="form-group" >
+                <input class="form-control"  type="text" placeholder="Body-fat in %" name="bodyfat">
+          </div>
   <!-- drop 1 -->
   <div class="form-group" >
-    <select class="ui dropdown" name="newcamp[breakfast]"  >
-        <option value="please select">Breackfast</option>
+    <select class="ui dropdown" name="breakfast"  >
+        <option value="Select breakfast">Breakfast</option>
         <option value=<%=a%>><%=a%></option>
         <option value=<%=b%>><%=b%></option>
         <option value=<%=c%>><%=c%></option>
@@ -72,7 +93,7 @@
    </div>
 <!-- drop 2 -->
    <div class="form-group" >
-      <select name="newcamp[lunch]" class="ui dropdown">
+      <select name="lunch" class="ui dropdown">
             <option value="">Lunch</option>
         <option value=<%=e%>><%=e%></option>
           <option value=<%=f%>><%=f%></option>
@@ -83,7 +104,7 @@
      </div>
 <!-- drop3 -->
      <div class="form-group">
-        <select name="newcamp[snack]"  class="ui dropdown">
+        <select name="snack"  class="ui dropdown">
                 <option value="">Snack</option>
             <option value=<%=i%>><%=i%></option>
           <option value=<%=j%>><%=j%></option>
@@ -95,7 +116,7 @@
        </div>
 <!-- drop4 -->
        <div class="form-group">
-          <select name="newcamp[prework]"  class="ui dropdown">
+          <select name="prework"  class="ui dropdown">
                 <option value="">Preworkout</option>
             <option value=<%=m%>><%=m%></option>
             <option value=<%=n%>><%=n%></option>
@@ -106,7 +127,7 @@
          </div>
 <!-- drop5 -->
   <div class="form-group">
-    <select name="newcamp[postwork]"  class="ui dropdown">
+    <select name="postwork"  class="ui dropdown">
             <option value="">Postworkout</option>
         <option value=<%=q%>><%=q%></option>
         <option value=<%=r%>><%=r%></option>
@@ -117,7 +138,7 @@
    </div>
 <!-- drop6 -->
    <div class="form-group">
-      <select name="newcamp[dinner]"  class="ui dropdown">
+      <select name="dinner"  class="ui dropdown">
             <option value="">Dinner</option>
         <option value=<%=u%>><%=u%></option>
         <option value=<%=v%>><%=v%></option>

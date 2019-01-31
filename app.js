@@ -74,8 +74,20 @@ app.get("/diets",function(req , res){
    // CREATE route
 app.post("/diets",function(req,res){
    
-    var newcamp = req.body.newcamp;
-   
+    var name = req.body.name; if(name === ""){res.set (name = undefined);  }else{};
+    var image = req.body.image; if(image === ""){res.set (image = undefined);  }else{};
+    var weight = req.body.weight; if(weight === ""){res.set (weight = undefined);  }else{};
+    var bodyfat = req.body.bodyfat; if(bodyfat === ""){res.set (bodyfat = undefined);  }else{};
+    var date = req.body.date; if(date === ""){res.set (date = undefined);  }else{};
+ 
+    var breakfast = req.body.breakfast; if(breakfast === ""){res.set (breakfast = undefined);  }else{};
+    var lunch = req.body.lunch; if(lunch=== ""){res.set (lunch = undefined);  }else{};
+    var snack = req.body.snack; if(snack === ""){res.set (snack = undefined);  }else{};
+    var prework = req.body.prework ; if(prework  === ""){res.set (prework  = undefined);  }else{};
+    var postwork = req.body.postwork; if(postwork === ""){res.set (postwork = undefined);  }else{};
+    var dinner = req.body.dinner; if(dinner === ""){res.set (dinner = undefined);  }else{};
+
+    var newcamp= {name:name , image:image, weight:weight , bodyfat:bodyfat, date:date, breakfast:breakfast, lunch:lunch,snack:snack,prework:prework,postwork:postwork,dinner:dinner }
     
    gym.create(newcamp,function(err,newgym){
        if(err){
@@ -88,6 +100,7 @@ app.post("/diets",function(req,res){
 
 //NEW route
 app.get("/diets/new",function(req,res){
+   
     res.render("diets/newdiet");
    
 })
@@ -118,7 +131,19 @@ app.get("/diets/:id/edit",function(req,res){
 
 //// UPDATE route
 app.put("/diets/:id",function(req,res){
-    var newcamp = req.body.newcamp;
+    var name = req.body.name; if(name === ""){res.set (name = undefined);  }else{};
+    var image = req.body.image; if(image === ""){res.set (image = undefined);  }else{};
+    var weight = req.body.weight; if(weight === ""){res.set (weight = undefined);  }else{};
+    var bodyfat = req.body.bodyfat; if(bodyfat === ""){res.set (bodyfat = undefined);  }else{};
+    var date = req.body.date; if(date === ""){res.set (date = undefined);  }else{};
+    var breakfast = req.body.breakfast; if(breakfast === ""){res.set (breakfast = undefined);  }else{};
+    var lunch = req.body.lunch; if(lunch=== ""){res.set (lunch = undefined);  }else{};
+    var snack = req.body.snack; if(snack === ""){res.set (snack = undefined);  }else{};
+    var prework = req.body.prework ; if(prework  === ""){res.set (prework  = undefined);  }else{};
+    var postwork = req.body.postwork; if(postwork === ""){res.set (postwork = undefined);  }else{};
+    var dinner = req.body.dinner; if(dinner === ""){res.set (dinner = undefined);  }else{};
+
+    var newcamp= {name:name , image:image, weight:weight , bodyfat:bodyfat,date:date,breakfast:breakfast, lunch:lunch,snack:snack,prework:prework,postwork:postwork,dinner:dinner}
     gym.findByIdAndUpdate(req.params.id,newcamp,function(err,updated){
         if(err){
             console.log(err)

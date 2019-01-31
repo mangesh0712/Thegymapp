@@ -1,19 +1,21 @@
 var mongoose           = require("mongoose");
 mongoose.connect("mongodb://localhost/dietplan");
 
+
+
 //SCHEMA SETUP
 var gymsSchema= new mongoose.Schema({
-        name:{type:String, default:"cristiano"},
-        image:String,
-        weight:Number,
-        bodyfat:Number,
-        date: {type:Date, default:Date.now},
-        breakfast:String,
-        lunch:String,
-        snack:String,
-        prework:String,
-        postwork:String,
-        dinner:String
+        name:{type:String, default:"mangesh" },
+        image:{type:String, default:"https://sd.keepcalm-o-matic.co.uk/i-w600/stay-strong-you-can-do-it.jpg" },
+        weight:{type:Number, default: 00 },
+        bodyfat:{type:Number, default: 00 },
+        date: Date,
+        breakfast:{type:String, default:"xyz" },
+        lunch:{type:String, default:"bbb" },
+        snack:{type:String, default:"aaa" },
+        prework:{type:String, default:"ccc" },
+        postwork:{type:String, default:"fff" },
+        dinner:{type:String, default:"jjj" }
   
 });
 //SCHEMA MODELLING
