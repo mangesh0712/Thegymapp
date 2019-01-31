@@ -1,44 +1,43 @@
 <% include ../partials/header %>
 <!-- /// -->
-<% var a ="2_egg_Omlet_+_2_Brown_Bread_+_2_Banana"; %>
-<% var b ="2_Boiled Eggs + 2 edli + peanut butter"; %>
-<% var c ="60_gm Oats + 10 Almonds + Apple"; %>
-<% var d ="3_Boiled Eggs + 1 Glass Milk + 2 Banana"; %>
+<% var a ="2eggOmlet-2BrownBread-2Banana"; %>
+<% var b ="2BoiledEggs-2edli-peanut-butter"; %>
+<% var c ="60gmOats-10Almonds-Apple"; %>
+<% var d ="3BoiledEggs-1GlassMilk-2Banana"; %>
 
 <!-- //// -->
-<% var e ="1_Cup Rice + Any Daal + 2 Boiled Eggs "; %>
-<% var f ="1_Cup Rice + Chicken 200 gm + Salad"; %>
-<% var g ="2_Chapati + 2 Egg Bhurji + Salad"; %>
-<% var h ="Roasted Chicken 200 gm + Salad"; %>
+<% var e ="1CupRice-AnyDaal-2BoiledEggs "; %>
+<% var f ="1CupRice-Chicken200gm-Salad"; %>
+<% var g ="2Chapati-2EggBhurji-Salad"; %>
+<% var h ="Roasted-Chicken200gm-Salad"; %>
 
 <!-- //// -->
-<% var i ="idli"; %>
-<% var j ="pulav"; %>
-<% var k ="2eggs"; %>
-<% var l ="2_chapati"; %>
-
-
-<!-- //// -->
-<% var m ="2_chapati"; %>
-<% var n ="2_chapati"; %>
-<% var o ="2_chapati"; %>
-<% var p ="2eggs"; %>
+<% var i ="AataMaggie-NimbuPani"; %>
+<% var j ="Dosa-banana"; %>
+<% var k ="FruitSalad"; %>
+<% var l ="2Chapati-Sabji"; %>
 
 
 <!-- //// -->
-<% var q ="2_chapati"; %>
-<% var r ="2_chapati"; %>
-<% var s ="2_chapati"; %>
-<% var t ="2_chapati"; %>
+<% var m ="Oats-2Banana"; %>
+<% var n ="3SliceBread-1Banana"; %>
+<% var o ="1CupRice"; %>
+<% var p ="MilkShake-Any"; %>
 
 
 <!-- //// -->
-<% var u ="2eggs"; %>
-<% var v ="2_chapati"; %>
-<% var w ="2_chapati"; %>
-<% var x="2_chapati"; %>
-<!-- //// -->
+<% var q ="5WhiteEggs-5Dates"; %>
+<% var r ="5WhiteEgga-2Whole"; %>
+<% var s ="DryFruits-Milk-1Banana"; %>
+<% var t ="Oats-Milk-1Banana"; %>
 
+
+<!-- //// -->
+<% var u ="2Chapati-Bhaji-ButterMilk-2eggs"; %>
+<% var v ="RajmaChawal-1Banana"; %>
+<% var w ="200gmChicken-rice-Salad"; %>
+<% var x="BhurjiChapati-Salad-NimbuPani"; %>
+<!-- //// -->
 
 <div class="container form">
     
@@ -64,10 +63,7 @@
                         <label> <h5>Pick a date...</h5></label>
                           <input class="form-control"  type="date" name="date" value="<%= data.date%>" >
                     </div>
-                  <div class="form-group" >
-                              <label> <h5>Pick a date...</h5></label>
-                                <input class="form-control"  type="date" >
-                          </div>
+                 
                   <div class="form-group" >
                         <input class="form-control"  type="text" value="<%= data.weight%>" placeholder="Weight in kg" name="weight">
                   </div>

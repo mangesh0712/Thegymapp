@@ -5,73 +5,82 @@
 <div class="ui raised very padded text container segment form">
                 
           <div class="ui segment">    
-              <a class="ui green ribbon label">Tips</a>
+              <a class="ui red ribbon label">Plan for <%= gym1.name %></a>
         
          
-         <p style="font-size:10px;"><%= gym1.date%></p>
+         <p style="font-size:10px; margin-top: 8px;"><%= gym1.date%></p>
        
         <div>
                 <img class="ui medium  rounded image" src="<%= gym1.image%>" >
         </div>
-         <div >
-           
-            <h3><%= gym1.weight%></h3>
-            <h3><%= gym1.bodyfat%></h3>
-            <h1><%=gym1.breakfast %> </h1>
-            <h1><%=gym1.lunch %> </h1>
-            <h1><%=gym1.snack %> </h1>
-            <h1><%=gym1.prework %> </h1>
-            <h1><%=gym1.postwork %> </h1>
-            <h1><%=gym1.dinner %> </h1>
-          
-            
-         
-           
-        
-        <div class="ui purple segment">
+
+        <div class="ui segment">
+                <div class="ui two column very relaxed grid">
+                  <div class="column">
+                    <p><strong>Weight :</strong> <%= gym1.weight%> kg</p>
+                    <p><strong>Breakfast :</strong> <%=gym1.breakfast %> </p>
+                    <p><strong>Snack :</strong> <%=gym1.snack %> </p>
+                    <p><strong>PostWork :</strong> <%=gym1.postwork %></p>
+                  </div>
+                  <div class="column">
+                    <p> <strong>Bodyfat :</strong> <%=gym1.bodyfat%></p>
+                    <p> <strong>Lunch :</strong> <%=gym1.lunch %></p>
+                    <p> <strong>Prework :</strong> <%=gym1.prework %></p>
+                     <p><strong>Dinner :</strong> <%=gym1.dinner %></p>
+                  </div>
+                </div>
+                <div class="ui vertical divider">
+                  AND
+                </div>
+              </div>
+           <div class="ui purple segment">
             <a href="/diets"><button class="ui black button">back</button></a>
     <a href="/diets/<%= gym1._id %>/edit"><button class="ui black button">edit</button></a>
     <form id="delete"action="/diets/<%= gym1.id %>?_method=DELETE" method="post">
          <a href="/diets/<%= gym1._id %>"><button class="ui black button">delete</button></a>
     </form>
-   
-        </div>
+ </div>
+
+ <div class="ui segment">
+        <a class="ui red ribbon label">Tips</a>  
+<div class="rules">
+        <h2 class="ui header">
+       
+         <a class="ui black circular label">Load your plate with vegetables.</a>
+       </h2>
+     </div>
+ 
+     <div class="rules">
+             <h2 class="ui header">
+              
+              <a class="ui black circular label">Have a plan when you hit the grocery store.</a>
+            </h2>
+    </div>
+    <div class="rules">
+         <h2 class="ui header">
+          
+          <a class="ui black circular label">Cut down on processed foods.</a>
+        </h2>
+</div>
+ <div class="rules">
+             <h2 class="ui header">
+      
+              <a class="ui black circular label">Switch to whole grains.</a>
+            </h2>
+    </div>  
+    <div class="rules">
+         <h2 class="ui header">
+      
+          <a class="ui black circular label">Enjoy your food,Don’t just count calories.</a>
+        </h2>
+</div>
+</div> 
+   <!-- ////// -->
   </div>
 </div>  
-  <div class="ui segment">
-                <a class="ui green ribbon label">Tips</a>  
-  <div class="rules">
-                <h2 class="ui header">
-               
-                 <a class="ui black circular label">Load your plate with vegetables.</a>
-               </h2>
-             </div>
-         
-             <div class="rules">
-                     <h2 class="ui header">
-                      
-                      <a class="ui black circular label">Have a plan when you hit the grocery store.</a>
-                    </h2>
-            </div>
-            <div class="rules">
-                 <h2 class="ui header">
-                  
-                  <a class="ui black circular label">Cut down on processed foods.</a>
-                </h2>
-        </div>
-         <div class="rules">
-                     <h2 class="ui header">
-              
-                      <a class="ui black circular label">Switch to whole grains.</a>
-                    </h2>
-            </div>  
-            <div class="rules">
-                 <h2 class="ui header">
-              
-                  <a class="ui black circular label">Enjoy your food,Don’t just count calories.</a>
-                </h2>
-        </div> 
-</div> 
+
+    
+
 </div>
     
 
