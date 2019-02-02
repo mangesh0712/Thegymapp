@@ -9,7 +9,7 @@ var gymsSchema= new mongoose.Schema({
         image:{type:String, default:"https://images.unsplash.com/photo-1535981767287-35259dbf7d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" },
         weight:{type:Number, default: 00 },
         bodyfat:{type:Number, default: 00 },
-        date: Date,
+        date: {type:Date, default: Date.now },
         breakfast:{type:String, default:"Please Select" },
         lunch:{type:String, default:"Please Select" },
         snack:{type:String, default:"Please Select" },

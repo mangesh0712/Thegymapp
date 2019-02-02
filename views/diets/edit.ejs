@@ -45,15 +45,15 @@
       <div style="width :40%; margin: 20px auto;">
            <form action="/diets/<%= data._id %>?_method=PUT" method="POST">
                <div class="form-group">
-                    <input class="form-control" type="text"value="<%= data.name %>" placeholder="name" name="name">
+                    <input class="form-control" type="text"value="<%= data.name %>" placeholder="Name" name="name">
                  </div>
                  <div class="form-group" >
                         <div class="row">
                             <div class="col-md-8">
-                                  <input class="form-control" type="text" value="<%= data.image%>" placeholder="Add any Motivational image" name="image">
+                                  <input class="form-control" type="text" value="<%= data.image%>" placeholder="Add any Motivational image..." name="image">
                             </div>
                             <div class="col-md-4">
-                                  <button class="ui white button"><a href="https://unsplash.com/search/photos/motivation"> here</a></button>
+                                  <button class="ui white button"><a href="https://unsplash.com/search/photos/motivation">Here</a></button>
                             </div>
                         </div>
                          
@@ -65,13 +65,15 @@
                     </div>
                  
                   <div class="form-group" >
+                              <label> <h5>Weight</h5></label>
                         <input class="form-control"  type="text" value="<%= data.weight%>" placeholder="Weight in kg" name="weight">
                   </div>
                   <div class="form-group" >
+                              <label> <h5>Bodyfat</h5></label>
                         <input class="form-control"  type="text" value="<%= data.bodyfat%>" placeholder="Body-fat in %" name="bodyfat">
                   </div>
               <div class="form-group">
-                    <select class="ui dropdown" name="breakfast" value="<%= data.breakfast %>" >
+                    <select class="ui dropdown" name="breakfast" placeholder="hhhh" value="<%= data.breakfast %>" >
                             <option value="Select breakfast">Breackfast</option>
                             <option value=<%=a%>><%=a%></option>
                             <option value=<%=b%>><%=b%></option>
@@ -144,7 +146,7 @@
                </div>
         
              </form>
-             <a class="ui grey button  " href="/diets">Back</a>
+             <a class="ui black button  " href="/diets">Back</a>
         </div>
     </div>
  

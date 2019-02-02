@@ -2,13 +2,13 @@
 
 <h2 style="text-align:center;">The diet plan <%= gym1.name%> follows..</h2>
 
-<div class="ui raised very padded text container segment form">
+<div id="seg"class="ui raised very padded text container segment forma">
                 
           <div class="ui segment">    
               <a class="ui red ribbon label">Plan for <%= gym1.name %></a>
         
          
-         <p style="font-size:10px; margin-top: 8px;"><%= gym1.date%></p>
+         <p style="font-size:10px; margin-top: 8px;"><strong>Created On :</strong><%= gym1.date%></p>
        
         <div>
                 <img class="ui medium  rounded image" src="<%= gym1.image%>" >
@@ -16,30 +16,24 @@
 
         <div class="ui segment">
                 <div class="ui two column very relaxed grid">
-                  <div class="column">
-                    <p><strong>Weight :</strong> <%= gym1.weight%> kg</p>
-                    <p><strong>Breakfast :</strong> <%=gym1.breakfast %> </p>
-                    <p><strong>Snack :</strong> <%=gym1.snack %> </p>
-                    <p><strong>PostWork :</strong> <%=gym1.postwork %></p>
+                  <div class="column cone">
+                    <p class="info"><strong>Weight :</strong> <%= gym1.weight%> kg</p>
+                    <p class="info"><strong>Breakfast :</strong> <%=gym1.breakfast %> </p>
+                    <p class="info"><strong>Snack :</strong> <%=gym1.snack %> </p>
+                    <p class="info"><strong>PostWork :</strong> <%=gym1.postwork %></p>
                   </div>
-                  <div class="column">
-                    <p> <strong>Bodyfat :</strong> <%=gym1.bodyfat%></p>
-                    <p> <strong>Lunch :</strong> <%=gym1.lunch %></p>
-                    <p> <strong>Prework :</strong> <%=gym1.prework %></p>
-                     <p><strong>Dinner :</strong> <%=gym1.dinner %></p>
+                  <div class="column cone">
+                    <p class="info"> <strong>Bodyfat :</strong> <%=gym1.bodyfat%> %</p>
+                    <p class="info"> <strong>Lunch :</strong> <%=gym1.lunch %></p>
+                    <p class="info"> <strong>Prework :</strong> <%=gym1.prework %></p>
+                     <p class="info"><strong>Dinner :</strong> <%=gym1.dinner %></p>
                   </div>
                 </div>
                 <div class="ui vertical divider">
                   AND
                 </div>
               </div>
-           <div class="ui purple segment">
-            <a href="/diets"><button class="ui black button">back</button></a>
-    <a href="/diets/<%= gym1._id %>/edit"><button class="ui black button">edit</button></a>
-    <form id="delete"action="/diets/<%= gym1.id %>?_method=DELETE" method="post">
-         <a href="/diets/<%= gym1._id %>"><button class="ui black button">delete</button></a>
-    </form>
- </div>
+           
 
  <div class="ui segment">
         <a class="ui red ribbon label">Tips</a>  
@@ -74,7 +68,14 @@
           <a class="ui black circular label">Enjoy your food,Don’t just count calories.</a>
         </h2>
 </div>
-</div> 
+</div>
+<div class="ui purple segment">
+  <a href="/diets"><button class="ui black button">Back</button></a>
+<a href="/diets/<%= gym1._id %>/edit"><button class="ui black button">Edit</button></a>
+<form id="delete"action="/diets/<%= gym1.id %>?_method=DELETE" method="post">
+<a href="/diets/<%= gym1._id %>"><button class="ui black button">Delete</button></a>
+</form>
+</div>
    <!-- ////// -->
   </div>
 </div>  
