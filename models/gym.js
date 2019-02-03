@@ -1,5 +1,5 @@
 var mongoose           = require("mongoose");
-mongoose.connect("mongodb://localhost/dietplan");
+mongoose.connect("mongodb://mangesh0712:7350649327m@ds221115.mlab.com:21115/dietplan", {useNewUrlParser:true});
 
 
 

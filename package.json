@@ -1,0 +1,27 @@
+{
+  "name": "vs5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mangesh0712/Thegymapp.git"
+  },
+  "author": "mangesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mangesh0712/Thegymapp/issues"
+  },
+  "homepage": "https://github.com/mangesh0712/Thegymapp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.9"
+  }
+}

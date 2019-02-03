@@ -12,7 +12,8 @@ var express            = require("express"),
 
 
 //SETING UP MONGODB
-mongoose.connect("mongodb://localhost/dietplan", {useNewUrlParser:true});
+// mongoose.connect("mongodb://localhost/dietplan", {useNewUrlParser:true});
+mongoose.connect("mongodb://mangesh0712:7350649327m@ds221115.mlab.com:21115/dietplan", {useNewUrlParser:true});
 
 app.use(express.static( 'public'));
 app.use(methodOverride("_method"));
@@ -49,16 +50,7 @@ app.post("/",function(req,res){
  
 })
 
-/// CREATE NEW GYM
-// gym.create({ name: "Gym area",
-//              image:"https://www.t-nation.com/system/publishing/articles/10004600/original/The-10-People-That-Drive-Gym-Owners-Crazy.png?1489783039",
-//              description: "this is the biggest gym in the world. five star gym"}, 
-//                      function(err,newlygym){
-//                          if(err){console.log(err);}
-//                          else{
-//                              console.log(newlygym);
-//                          }
-//                      })
+
 
 // INDEX route - all campgrounds
 app.get("/diets",function(req , res){
