@@ -157,6 +157,6 @@ app.delete("/diets/:id",function(req,res){
 
 
 
-app.listen(4000,function(){
-    console.log("welcome to the yelpcamp");
-})
+app.listen(process.env.PORT||4000,process.env.IP,function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
