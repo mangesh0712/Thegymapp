@@ -32,7 +32,7 @@ app.get("/",function(req , res){
 
 app.post("/",function(req,res){
     var key = req.body.key;
-    console.log(key)
+    
     var pass = 327;
      if(key == pass){
         gym.find({},function(err,allgyms){
@@ -158,5 +158,5 @@ app.delete("/diets/:id",function(req,res){
 
 
 app.listen(process.env.PORT||4000,process.env.IP,function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    console.log("hello", this.address().port, app.settings.env);
 });

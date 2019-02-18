@@ -2,8 +2,8 @@
  
 <!-- jumbotron========================= -->
 <div  class="container forma" >
-       <div class="jumbotron">
-            <div class="container">
+       <div class="jumbotron backcolor">
+            <div class="container ">
 
                     <h1>Track your fitness routine here....</h1>
                     <p>Add your new Routine..</p>
@@ -28,13 +28,13 @@
                     <% camp.forEach(function(camps){  %>
                  <div class="col-md-4 col-sm-6 niche">
                         <div  class="ui medium  image">
-                                <img src="<%= camps.image %>">
+                               <a href="/diets/<%=camps._id%>"><img src="<%= camps.image %>"></a> 
                         </div>
-                        <div class="ui black segment" style="background-color:#e0e0d1;">
+                        <div class="ui black segment backcolor">
                            <h4>Plan for you <%= camps.name.toUpperCase() %></h4>
                         </div>
                         <p>
-                            <a href="/diets/<%=camps._id %>" class="ui black button" > more info </a>
+                            <a href="/diets/<%=camps._id %>" id="ccc"class="ui black button " ><span class="color ">More info</span></a>
                         </p>
                      </div>
                  <% }); %>

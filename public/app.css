@@ -87,3 +87,16 @@
       margin-right: 0%;
     }
 }
+
+.color{
+    color: black;
+}
+.backcolor{
+    background-color: white;
+}
+.textcolor{
+    color: white;
+}
+#ccc{
+    background-color: #88bfe8;
+}

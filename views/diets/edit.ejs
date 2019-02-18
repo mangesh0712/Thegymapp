@@ -41,7 +41,7 @@
 
 <div class="container form">
     
-<h2 style="text-align:center;">Edit Info About Your Diet Plan</h2>
+<h2 style="text-align:center;" class="textcolor">Edit Info About Your Diet Plan</h2>
       <div style="width :40%; margin: 20px auto;">
            <form action="/diets/<%= data._id %>?_method=PUT" method="POST">
                <div class="form-group">
@@ -60,16 +60,16 @@
                           
                     </div>
                     <div class="form-group" >
-                        <label> <h5>Pick a date...</h5></label>
+                        <label> <h5 class="textcolor">Pick a date...</h5></label>
                           <input class="form-control"  type="date" name="date" value="<%= data.date%>" >
                     </div>
                  
                   <div class="form-group" >
-                              <label> <h5>Weight</h5></label>
+                              <label> <h5 class="textcolor">Weight</h5></label>
                         <input class="form-control"  type="text" value="<%= data.weight%>" placeholder="Weight in kg" name="weight">
                   </div>
                   <div class="form-group" >
-                              <label> <h5>Bodyfat</h5></label>
+                              <label> <h5 class="textcolor">Bodyfat</h5></label>
                         <input class="form-control"  type="text" value="<%= data.bodyfat%>" placeholder="Body-fat in %" name="bodyfat">
                   </div>
               <div class="form-group">
@@ -142,11 +142,11 @@
                     
               
               <div class="form-group">
-                    <button  class="ui black button btn-block">submit</button>
+                    <button id="ccc" class="ui black button btn-block"><span class="color">Submit</span></button>
                </div>
         
              </form>
-             <a class="ui black button  " href="/diets">Back</a>
+             <a id="ccc"class="ui black button  " href="/diets"><span class="color">Back</span></a>
         </div>
     </div>
  
